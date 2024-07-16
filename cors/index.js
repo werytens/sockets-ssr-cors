@@ -20,7 +20,7 @@ const notSimpleHeaders = ["Content-Encoding", "API-key"];
 const corsOptions = {
   origin: function (origin, callback) {
     if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true);
+      callback(null, true); // null - объект ошибки
     } else {
       callback(new Error("Not allowed by CORS"));
     }
