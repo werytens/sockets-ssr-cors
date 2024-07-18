@@ -32,6 +32,9 @@ const corsOptions = {
   exposedHeaders: notSimpleHeaders, // доступ к непростым заголовкам
 };
 
+// allowedHeaders определяет, какие заголовки запросов могут быть отправлены клиентом на сервер
+// exposedHeaders определяет, какие заголовки ответов могут быть прочитаны клиентом с сервера
+
 app.use(cors(corsOptions));
 
 app.get("/test", (req, res) => {
